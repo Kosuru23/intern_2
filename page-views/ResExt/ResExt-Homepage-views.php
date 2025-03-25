@@ -5,15 +5,29 @@
     </div>
 </section>
 
-<?php require_once '../__includes/ResExtSubNav.php' ?>
+<?php 
+
+require_once '../__includes/ResExtSubNav.php'; 
+require_once '../classes/connect.php';
+require_once '../classes/database.php';
+
+$db = new Database();
+$user = new User($db);
+$in_name = 'Research, Extension and External Linkages';
+$name = "President’s Message";
+$array = $user->order($name, $in_name);
+$counter = 0;
+?>
 
 <section class="ResExtHomePageHeroCont">
     <div class="ResExtHomePageHero">
         <div class="ResExtHomePageHeroTextCont">
             <p class="ResExtHomePageHeroTitle inter-black">PRESIDENT’S MESSAGE</p>
-            <p class="ResExtHomePageHeroText inter-light">“We make a living by what we get, but we make a life by what we give.” These wise  words from Winston Churchill resonate deeply with our mission at Western Mindanao  State University. Our commitment to community service is not just a duty but a  privilege. We believe that the true measure of our success lies in the positive impact  we create in the lives of those we serve.</p>
-            <p class="ResExtHomePageHeroText inter-light">Our extension programs stand as a beacon of our dedication to imparting knowledge,  developing skills, and empowering communities throughout Zamboanga City and the  entire region, all in the pursuit of creating a better life for everyone.</p>
-            <p class="ResExtHomePageHeroText inter-light">The University Extension Manual is more than just a guide; it embodies our collective  efforts to make a meaningful difference. It serves as a roadmap for our faculty,  students, and stakeholders to effectively implement programs that resonate with our  core values of service, excellence, and resilience. Together, let us continue to make a  meaningful difference in the lives of those we serve.</p>
+        <?php foreach($array as $arr):?>
+            <p class="ResExtHomePageHeroText inter-light"><?=$arr['description']?></p>
+        <?php 
+        endforeach; 
+        ?>         
         </div>
         <div class="ResExtHomePageHeroImgCont">
             <div class="ResExtHomePageHeroImgContent">
@@ -82,7 +96,7 @@
         <div class="ResExtOVPImg"></div>
         <div class="ResExtOVPContent">
             <p class="ResExtOVPTitle inter-bold">OFFICE OF THE VICE PRESIDENT</p>
-            <p class="ResExtOVPSubTitle inter-bold">for Research, Extension  and External Linkages</p>
+            <p class="ResExtOVPSubTitle inter-bold">for Research, Extension and External Linkages</p>
             <div class="ResExtResDevTopUnderline"></div>
             <div class="ResExtOVPHeadCont">
                 <p class="ResExtOVPHead inter-bold">DR. JOEL G. FERNANDO</p>
@@ -91,3 +105,4 @@
         </div>
     </div>
 </section>
+

@@ -4,8 +4,8 @@
 
 <body>
     <?php require_once '../__includes/navbar.php'; ?>
-    <div class="ResExt-body">
-        <?php require_once '../page-views/ResExt/ResExt-Homepage-views.php'; ?>
+    <div class="ActProgProj-body">
+        <?php require_once '../page-views/ResExt/ResExt-ActProgProj-views.php'; ?>
     </div>
     <?php
     require_once '../__includes/footer.php';

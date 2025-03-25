@@ -59,7 +59,7 @@
 }
 
 .ResExtHomePageHeroImg{
-    background-image: url(../imgs/OCHO.png);
+    background-image: url(../functions/images.php?name=President’s_Message);
     background-position: center;
     background-size: cover;
     width: 650px;

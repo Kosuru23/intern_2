@@ -5,7 +5,7 @@
 <body>
     <?php require_once '../__includes/navbar.php'; ?>
     <div class="ResExt-body">
-        <?php require_once '../page-views/ResExt/ResExt-Homepage-views.php'; ?>
+        <?php require_once '../page-views/ResExt/ResExt-ResearchUnits-views.php'; ?>
     </div>
     <?php
     require_once '../__includes/footer.php';
